@@ -7,8 +7,10 @@
 //
 
 #import "SFViewController.h"
+#import "SentTextViewController.h"
 
 @interface SFViewController ()
+@property (strong, nonatomic) IBOutlet UITextField *textField;
 
 @end
 
@@ -24,6 +26,11 @@
 {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+    SentTextViewController *viewController = segue.destinationViewController;
+    viewController.string = _textField.text;
 }
 
 @end
