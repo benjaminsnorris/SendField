@@ -8,6 +8,7 @@
 
 #import "SFViewController.h"
 #import "SentTextViewController.h"
+#import "ReceiveTextViewController.h"
 
 @interface SFViewController ()
 @property (strong, nonatomic) IBOutlet UITextField *textField;
@@ -26,6 +27,13 @@
 {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+- (IBAction)receive:(id)sender {
+    ReceiveTextViewController *receiveViewController = [self.storyboard instantiateViewControllerWithIdentifier:NSStringFromClass([ReceiveTextViewController class])];
+    
+    _textField.text = receiveViewController.receivedText;
+    
+    [self showViewController:receiveViewController sender:self];
 }
 
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {

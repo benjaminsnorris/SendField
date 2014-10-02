@@ -34,14 +34,25 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xdv-jv-ASA">
+                                <rect key="frame" x="366" y="323" width="92" height="30"/>
+                                <state key="normal" title="Receive Field">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="receive:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="dvb-KR-iMO"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="O4N-mt-oCZ" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leading" constant="20" symbolic="YES" id="2y6-fl-EQj"/>
+                            <constraint firstItem="xdv-jv-ASA" firstAttribute="centerY" secondItem="xxU-H1-ejD" secondAttribute="centerY" id="Vum-b1-lWQ"/>
                             <constraint firstItem="O4N-mt-oCZ" firstAttribute="centerY" secondItem="kh9-bI-dsS" secondAttribute="centerY" id="Ybh-6A-hZL"/>
                             <constraint firstAttribute="trailing" secondItem="O4N-mt-oCZ" secondAttribute="trailing" constant="20" symbolic="YES" id="YhS-2y-Cnr"/>
                             <constraint firstItem="xxU-H1-ejD" firstAttribute="top" secondItem="O4N-mt-oCZ" secondAttribute="bottom" constant="8" symbolic="YES" id="eTD-AW-33h"/>
                             <constraint firstItem="O4N-mt-oCZ" firstAttribute="trailing" secondItem="xxU-H1-ejD" secondAttribute="trailing" id="jxX-lz-MaF"/>
+                            <constraint firstItem="xxU-H1-ejD" firstAttribute="leading" secondItem="xdv-jv-ASA" secondAttribute="trailing" constant="-11" id="yL9-E7-4lM"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="Br2-j9-Xpz"/>
@@ -86,6 +97,36 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dNc-t4-haO" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2596.875" y="407.74647887323943"/>
+        </scene>
+        <!--Receive Text View Controller-->
+        <scene sceneID="jKc-Yp-qnc">
+            <objects>
+                <viewController storyboardIdentifier="ReceiveTextViewController" id="vpp-19-coD" customClass="ReceiveTextViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="q3G-WO-elG"/>
+                        <viewControllerLayoutGuide type="bottom" id="HtE-J2-Uxq"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="0ay-9b-R2B">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Received" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jpm-oS-dX7">
+                                <rect key="frame" x="264" y="289" width="72" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="0.0" green="0.50196081400000003" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="centerX" secondItem="jpm-oS-dX7" secondAttribute="centerX" id="gUz-8h-smP"/>
+                            <constraint firstAttribute="centerY" secondItem="jpm-oS-dX7" secondAttribute="centerY" constant="0.5" id="lJ8-XD-nrw"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="kZB-I4-zch" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1850" y="1115"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="ube-4U-Q05">
